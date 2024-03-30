@@ -5,9 +5,9 @@ import com.cciliacode.weatherapp.entity.GeocodingCoordinatesEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GeocodingCoordinatesMapper {
+public class GeocodingCoordinatesConverter {
 
-    public CityCoordinates mapToDomain(final GeocodingCoordinatesEntity entity){
+    public CityCoordinates convertToCityCoordinatesDomain(final GeocodingCoordinatesEntity entity){
         return CityCoordinates.builder()
                 .latitude(entity.getLatitude())
                 .longitude(entity.getLongitude())
