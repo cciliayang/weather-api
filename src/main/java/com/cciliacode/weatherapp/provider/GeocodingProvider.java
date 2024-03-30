@@ -34,7 +34,9 @@ public class GeocodingProvider {
                 geocodingUrl)
                 .queryParam("q", weatherRequestDetails.getCity())
                 .queryParam("limit", "1")
-                .queryParam("appid", apiKey).build();
+                .queryParam("appid", apiKey)
+                .queryParam("units", "metric")
+                .build();
 
         try{
             responseEntity = restTemplate

@@ -14,4 +14,8 @@ public class OpenWeatherResponseEntity {
 
     @JsonProperty("weather")
     private WeatherEntity[] weather;
+
+    @JsonProperty("main")
+    private MainEntity mainEntity;
+
 }

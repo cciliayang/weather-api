@@ -13,6 +13,7 @@ public class OpenWeatherMapper {
         return CityWeather.builder()
                 .weather(entity.getWeather()[0].getMain())
                 .details(entity.getWeather()[0].getDescription())
+                .main(entity.getMainEntity().getTemperature())
                 .build();
     }
 
@@ -21,6 +22,7 @@ public class OpenWeatherMapper {
         return WeatherResponse.builder()
                 .weather(cityWeather.getWeather())
                 .description(cityWeather.getDetails())
+                .temperature(cityWeather.getMain())
                 .build();
     }
 }

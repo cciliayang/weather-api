@@ -31,7 +31,8 @@ public class WeatherProvider {
         UriComponents uriBuilder = UriComponentsBuilder.fromHttpUrl(weatherUrl)
                 .queryParam("lat", cityCoordinates.getLatitude())
                 .queryParam("lon", cityCoordinates.getLongitude())
-                .queryParam("appid", apiKey).build();
+                .queryParam("appid", apiKey)
+                .queryParam("units", "metric").build();
 
         try {
             responseEntity = restTemplate

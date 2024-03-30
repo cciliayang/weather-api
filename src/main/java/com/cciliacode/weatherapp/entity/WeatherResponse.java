@@ -9,6 +9,6 @@ import lombok.*;
 @Setter
 public class WeatherResponse {
     private String weather;
-//    private String details;
     private String description;
+    private String temperature;
 }
